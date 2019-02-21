@@ -18,24 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pgxprototypeassets" translatesAutoresizingMaskIntoConstraints="NO" id="bf3-WI-QS4">
-                                <rect key="frame" x="115" y="300" width="145" height="194"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NP-tP-MOX" userLabel="Intro1Text">
-                                <rect key="frame" x="16" y="122" width="336" height="112"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">The field of pharmacogenomics combines both pharmacology and genomics to develop safe and effective medications along with proper dosages that should be customized to variations in one's genes.</string>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w8d-Xn-o3d">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8d-Xn-o3d">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="HAp-Hz-U80"/>
-                                </constraints>
                                 <items>
                                     <navigationItem id="uAC-DN-uaN">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="XIl-gC-pnT"/>
@@ -47,9 +31,33 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pgxprototypeassets" translatesAutoresizingMaskIntoConstraints="NO" id="bf3-WI-QS4">
+                                <rect key="frame" x="115" y="300" width="145" height="194"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7NP-tP-MOX" userLabel="Intro1Text">
+                                <rect key="frame" x="-582.5" y="80" width="1540" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="Myr-H9-sPr"/>
+                                </constraints>
+                                <string key="text">The field of pharmacogenomics combines both pharmacology and genomics to develop safe and effective medications along with proper dosages that should be customized to variations in one's genes.</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="bf3-WI-QS4" firstAttribute="centerX" secondItem="9a8-xa-e16" secondAttribute="centerX" id="B5C-fY-ih5"/>
+                            <constraint firstItem="7NP-tP-MOX" firstAttribute="top" secondItem="9a8-xa-e16" secondAttribute="top" constant="80" id="GrO-Yv-yFE"/>
+                            <constraint firstItem="7NP-tP-MOX" firstAttribute="top" secondItem="w8d-Xn-o3d" secondAttribute="bottom" constant="16" id="JWD-PS-xtQ"/>
+                            <constraint firstItem="bf3-WI-QS4" firstAttribute="top" secondItem="7NP-tP-MOX" secondAttribute="bottom" constant="80" id="SPY-A4-RqO"/>
+                            <constraint firstItem="7NP-tP-MOX" firstAttribute="centerX" secondItem="w8d-Xn-o3d" secondAttribute="centerX" id="dh1-sG-Bix"/>
+                            <constraint firstItem="w8d-Xn-o3d" firstAttribute="leading" secondItem="9a8-xa-e16" secondAttribute="leading" id="f2h-Z7-qzV"/>
+                            <constraint firstItem="bf3-WI-QS4" firstAttribute="centerX" secondItem="7NP-tP-MOX" secondAttribute="centerX" id="urf-bj-fdL"/>
+                            <constraint firstItem="7NP-tP-MOX" firstAttribute="centerX" secondItem="9a8-xa-e16" secondAttribute="centerX" id="xeI-bR-BvU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Fkj-9l-5Au"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="wA6-4u-zdd" appends="YES" id="cv0-FN-MLo"/>
@@ -75,19 +83,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEI-O1-f3c" userLabel="Intro2Text">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEI-O1-f3c" userLabel="Intro2Text">
                                 <rect key="frame" x="16" y="104" width="339" height="145"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Pharmacogenomics aims to predict how individual genetic variability impacts drug absorption, metabolism, and activity. While one treatment approach may work well for one individual, the same approach may not be effective or may cause adverse drug effects in other patients.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen2picture" translatesAutoresizingMaskIntoConstraints="NO" id="wh9-yz-CGc" userLabel="Intro2picture">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen2picture" translatesAutoresizingMaskIntoConstraints="NO" id="wh9-yz-CGc" userLabel="Intro2picture">
                                 <rect key="frame" x="18" y="257" width="339" height="265"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="265" id="lCO-0A-bwL"/>
+                                </constraints>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hrf-QQ-4ot">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hrf-QQ-4ot">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="xkF-Li-Z62"/>
@@ -105,6 +114,18 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aFl-E1-okZ" firstAttribute="trailing" secondItem="fEI-O1-f3c" secondAttribute="trailing" constant="20" id="2Lt-sx-YG4"/>
+                            <constraint firstItem="Hrf-QQ-4ot" firstAttribute="leading" secondItem="7N0-jb-l06" secondAttribute="leading" id="4sQ-5z-zpJ"/>
+                            <constraint firstItem="fEI-O1-f3c" firstAttribute="leading" secondItem="7N0-jb-l06" secondAttribute="leadingMargin" id="9vj-E0-e0J"/>
+                            <constraint firstItem="aFl-E1-okZ" firstAttribute="bottom" secondItem="wh9-yz-CGc" secondAttribute="bottom" constant="145" id="A6Q-EB-0en"/>
+                            <constraint firstItem="Hrf-QQ-4ot" firstAttribute="top" secondItem="aFl-E1-okZ" secondAttribute="top" id="H3Y-9j-lyp"/>
+                            <constraint firstItem="Hrf-QQ-4ot" firstAttribute="centerX" secondItem="wh9-yz-CGc" secondAttribute="centerX" id="Mr8-Jg-4Op"/>
+                            <constraint firstAttribute="trailing" secondItem="Hrf-QQ-4ot" secondAttribute="trailing" id="UfI-sj-B5E"/>
+                            <constraint firstItem="wh9-yz-CGc" firstAttribute="top" secondItem="fEI-O1-f3c" secondAttribute="bottom" constant="8" symbolic="YES" id="pXy-gk-qhx"/>
+                            <constraint firstItem="fEI-O1-f3c" firstAttribute="top" secondItem="Hrf-QQ-4ot" secondAttribute="bottom" constant="40" id="vKK-1Q-gz4"/>
+                            <constraint firstItem="wh9-yz-CGc" firstAttribute="leading" secondItem="aFl-E1-okZ" secondAttribute="leading" constant="18" id="ycZ-bW-OcX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aFl-E1-okZ"/>
                     </view>
                     <connections>
@@ -128,19 +149,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen3picture2" translatesAutoresizingMaskIntoConstraints="NO" id="3B4-Rj-Yu0" userLabel="Intro3picture2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Screen3picture2" translatesAutoresizingMaskIntoConstraints="NO" id="3B4-Rj-Yu0" userLabel="Intro3picture2">
                                 <rect key="frame" x="21" y="397" width="338" height="243"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen3picture1" translatesAutoresizingMaskIntoConstraints="NO" id="N3o-OM-Cla" userLabel="Intro3picture1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen3picture1" translatesAutoresizingMaskIntoConstraints="NO" id="N3o-OM-Cla" userLabel="Intro3picture1">
                                 <rect key="frame" x="16" y="99" width="343" height="185"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen3header" translatesAutoresizingMaskIntoConstraints="NO" id="CAW-hW-uF1" userLabel="Intro3header">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen3header" translatesAutoresizingMaskIntoConstraints="NO" id="CAW-hW-uF1" userLabel="Intro3header">
                                 <rect key="frame" x="16" y="292" width="343" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="0hA-lg-J3n"/>
+                                </constraints>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pEt-UD-ckh">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEt-UD-ckh">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="K2Q-HC-zuO"/>
@@ -159,6 +180,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="pEt-UD-ckh" firstAttribute="top" secondItem="q0U-3b-axS" secondAttribute="top" id="0OW-by-lnf"/>
+                            <constraint firstItem="CAW-hW-uF1" firstAttribute="leading" secondItem="drr-tg-3q3" secondAttribute="leadingMargin" id="6dm-3J-AAY"/>
+                            <constraint firstItem="pEt-UD-ckh" firstAttribute="leading" secondItem="drr-tg-3q3" secondAttribute="leading" id="FVS-AX-dwf"/>
+                            <constraint firstItem="CAW-hW-uF1" firstAttribute="trailing" secondItem="3B4-Rj-Yu0" secondAttribute="trailing" id="Feh-gj-fDj"/>
+                            <constraint firstAttribute="trailing" secondItem="pEt-UD-ckh" secondAttribute="trailing" id="JzH-5p-gko"/>
+                            <constraint firstItem="pEt-UD-ckh" firstAttribute="centerX" secondItem="N3o-OM-Cla" secondAttribute="centerX" id="LRa-nf-mlb"/>
+                            <constraint firstItem="N3o-OM-Cla" firstAttribute="top" secondItem="pEt-UD-ckh" secondAttribute="bottom" constant="35" id="Myv-iy-ZED"/>
+                            <constraint firstItem="CAW-hW-uF1" firstAttribute="leading" secondItem="N3o-OM-Cla" secondAttribute="leading" id="NHg-Qk-RkW"/>
+                            <constraint firstItem="CAW-hW-uF1" firstAttribute="top" secondItem="N3o-OM-Cla" secondAttribute="bottom" constant="8" symbolic="YES" id="TFg-9j-esu"/>
+                            <constraint firstItem="pEt-UD-ckh" firstAttribute="centerX" secondItem="CAW-hW-uF1" secondAttribute="centerX" id="gRh-A4-9eK"/>
+                            <constraint firstItem="3B4-Rj-Yu0" firstAttribute="top" secondItem="CAW-hW-uF1" secondAttribute="bottom" constant="60" id="m7A-sR-EDj"/>
+                            <constraint firstItem="CAW-hW-uF1" firstAttribute="top" secondItem="drr-tg-3q3" secondAttribute="top" constant="292" id="nO0-JW-jHd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="q0U-3b-axS"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="Jdo-rD-wjo" appends="YES" id="dpF-Ky-zAj"/>
@@ -185,18 +220,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boxes" translatesAutoresizingMaskIntoConstraints="NO" id="HtV-1k-8Md">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boxes" translatesAutoresizingMaskIntoConstraints="NO" id="HtV-1k-8Md">
                                 <rect key="frame" x="50" y="158" width="275" height="367"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="367" id="Gff-ha-PxK"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How to use this clinical decision support tool" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NrT-cl-Mqp" userLabel="Intro4Title">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to use this clinical decision support tool" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NrT-cl-Mqp" userLabel="Intro4Title">
                                 <rect key="frame" x="50" y="88" width="275" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U22-Hw-Gh5">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U22-Hw-Gh5">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="tvV-Lx-4NP"/>
@@ -214,6 +250,18 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HtV-1k-8Md" firstAttribute="leading" secondItem="RCF-ue-BxX" secondAttribute="leading" constant="50" id="4RL-s3-xIa"/>
+                            <constraint firstItem="HtV-1k-8Md" firstAttribute="leading" secondItem="NrT-cl-Mqp" secondAttribute="leading" id="4sC-i6-Zag"/>
+                            <constraint firstItem="U22-Hw-Gh5" firstAttribute="top" secondItem="RCF-ue-BxX" secondAttribute="top" id="7Gk-uC-GvV"/>
+                            <constraint firstItem="U22-Hw-Gh5" firstAttribute="centerX" secondItem="HtV-1k-8Md" secondAttribute="centerX" id="Hyy-0d-6jb"/>
+                            <constraint firstItem="HtV-1k-8Md" firstAttribute="top" secondItem="NrT-cl-Mqp" secondAttribute="bottom" constant="23" id="MJA-k1-6vC"/>
+                            <constraint firstItem="RCF-ue-BxX" firstAttribute="bottom" secondItem="HtV-1k-8Md" secondAttribute="bottom" constant="142" id="XZX-Lu-HAW"/>
+                            <constraint firstAttribute="trailing" secondItem="U22-Hw-Gh5" secondAttribute="trailing" id="dPN-1T-5Sq"/>
+                            <constraint firstItem="NrT-cl-Mqp" firstAttribute="top" secondItem="U22-Hw-Gh5" secondAttribute="bottom" constant="24" id="gx1-KT-cH8"/>
+                            <constraint firstItem="U22-Hw-Gh5" firstAttribute="centerX" secondItem="NrT-cl-Mqp" secondAttribute="centerX" id="rn4-oo-mIw"/>
+                            <constraint firstItem="U22-Hw-Gh5" firstAttribute="leading" secondItem="bvA-P2-vvg" secondAttribute="leading" id="sD6-UC-e6q"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RCF-ue-BxX"/>
                     </view>
                     <connections>
@@ -237,23 +285,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsy-Kd-n7V">
-                                <rect key="frame" x="33" y="179" width="326" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsy-Kd-n7V">
+                                <rect key="frame" x="95" y="308" width="185" height="51"/>
                                 <color key="backgroundColor" red="0.36162400249999999" green="0.4829236865" blue="0.70590549709999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="Get Started"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="  Get Started  "/>
                                 <connections>
                                     <action selector="getStartedButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SPa-yc-WPs"/>
                                     <segue destination="8zB-41-42w" kind="show" id="1WO-5n-7RK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNX-6c-SXz">
-                                <rect key="frame" x="33" y="293" width="326" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNX-6c-SXz">
+                                <rect key="frame" x="29" y="391" width="317" height="56"/>
                                 <color key="backgroundColor" red="0.36162400249999999" green="0.4829236865" blue="0.70590549709999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Want To Know More?"/>
+                                <state key="normal" title="  Want To Know More?  "/>
                                 <connections>
                                     <action selector="wantToKnowMorePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NXN-uJ-dMZ"/>
                                     <segue destination="Xzh-iG-L48" kind="show" id="qSq-eX-QY8"/>
@@ -261,6 +308,13 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JNX-6c-SXz" firstAttribute="top" secondItem="bsy-Kd-n7V" secondAttribute="bottom" constant="32" id="Cig-qg-fmt"/>
+                            <constraint firstItem="UFj-xH-Loh" firstAttribute="bottom" secondItem="JNX-6c-SXz" secondAttribute="bottom" constant="220" id="a3O-4I-rRa"/>
+                            <constraint firstItem="bsy-Kd-n7V" firstAttribute="centerX" secondItem="1zX-gO-E4c" secondAttribute="centerX" id="bUP-8S-kCv"/>
+                            <constraint firstItem="bsy-Kd-n7V" firstAttribute="centerY" secondItem="1zX-gO-E4c" secondAttribute="centerY" id="r8h-3o-I6F"/>
+                            <constraint firstItem="JNX-6c-SXz" firstAttribute="centerX" secondItem="bsy-Kd-n7V" secondAttribute="centerX" id="srB-Lr-5LW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UFj-xH-Loh"/>
                     </view>
                     <connections>
@@ -678,7 +732,7 @@ Phenotype: The observable expression of one's genes.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wUq-q0-ikf">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wUq-q0-ikf">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="eFc-BP-Rxe"/>
@@ -694,9 +748,8 @@ Phenotype: The observable expression of one's genes.</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Basic Genetics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQO-Fv-QhQ">
-                                <rect key="frame" x="130" y="77" width="114" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Basic Genetics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQO-Fv-QhQ">
+                                <rect key="frame" x="130.5" y="77" width="114" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -704,6 +757,13 @@ Phenotype: The observable expression of one's genes.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="wUq-q0-ikf" firstAttribute="centerX" secondItem="EQO-Fv-QhQ" secondAttribute="centerX" id="L0f-JF-hDy"/>
+                            <constraint firstItem="wUq-q0-ikf" firstAttribute="leading" secondItem="LH6-aG-R55" secondAttribute="leading" id="N3j-ME-Khp"/>
+                            <constraint firstAttribute="trailing" secondItem="wUq-q0-ikf" secondAttribute="trailing" id="PMk-RP-KGF"/>
+                            <constraint firstItem="EQO-Fv-QhQ" firstAttribute="top" secondItem="wUq-q0-ikf" secondAttribute="bottom" constant="13" id="ePp-0n-9YK"/>
+                            <constraint firstItem="wUq-q0-ikf" firstAttribute="top" secondItem="2uS-K4-KpI" secondAttribute="top" id="tDL-gv-5GP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2uS-K4-KpI"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="7nl-K2-Wsa" appends="YES" id="w4S-su-Eh8"/>
@@ -747,7 +807,7 @@ Phenotype: The observable expression of one's genes.</string>
                                 <rect key="frame" x="61" y="440" width="263" height="207"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="caK-Ip-wz0">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caK-Ip-wz0">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="kyU-iL-cQH"/>
@@ -763,9 +823,8 @@ Phenotype: The observable expression of one's genes.</string>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Genetic Tests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c22-li-Vg3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genetic Tests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c22-li-Vg3">
                                 <rect key="frame" x="135" y="64" width="105" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -773,6 +832,13 @@ Phenotype: The observable expression of one's genes.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="caK-Ip-wz0" firstAttribute="leading" secondItem="1eY-NP-vUA" secondAttribute="leading" id="A4w-9f-rs3"/>
+                            <constraint firstItem="caK-Ip-wz0" firstAttribute="centerX" secondItem="c22-li-Vg3" secondAttribute="centerX" id="DJq-Ky-7jh"/>
+                            <constraint firstItem="caK-Ip-wz0" firstAttribute="bottom" secondItem="c22-li-Vg3" secondAttribute="top" id="TFY-wf-wX0"/>
+                            <constraint firstItem="caK-Ip-wz0" firstAttribute="top" secondItem="MdG-FR-7ui" secondAttribute="top" id="ZPM-FC-dO0"/>
+                            <constraint firstAttribute="trailing" secondItem="caK-Ip-wz0" secondAttribute="trailing" id="d9W-X9-klI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MdG-FR-7ui"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="qHl-8G-sXO" appends="YES" id="3RB-sm-6PZ"/>
@@ -799,16 +865,17 @@ Phenotype: The observable expression of one's genes.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Why Individuals May Respond Differently to Medications" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dG-Zl-fXc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Why Individuals May Respond Differently to Medications" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dG-Zl-fXc">
                                 <rect key="frame" x="62" y="75" width="250" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBO-3n-rb7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBO-3n-rb7">
                                 <rect key="frame" x="16" y="155" width="343" height="435"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="435" id="B5b-qh-jwH"/>
+                                </constraints>
                                 <string key="text">Did You Know:
 * Polymorphism is a type of DNA sequence variation that is common in a population.
 
@@ -825,7 +892,7 @@ extra copies of a gene.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cQG-4w-WeM">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQG-4w-WeM">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="kgc-Wc-7sl"/>
@@ -844,6 +911,16 @@ extra copies of a gene.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cQG-4w-WeM" secondAttribute="trailing" id="3wS-HO-JxR"/>
+                            <constraint firstItem="cQG-4w-WeM" firstAttribute="top" secondItem="ehT-dP-9BK" secondAttribute="top" id="Dce-3u-gIc"/>
+                            <constraint firstItem="cQG-4w-WeM" firstAttribute="leading" secondItem="tZ6-Ac-oWi" secondAttribute="leading" id="Dwv-hR-gg7"/>
+                            <constraint firstItem="hBO-3n-rb7" firstAttribute="top" secondItem="4dG-Zl-fXc" secondAttribute="bottom" constant="33" id="Vst-rV-AwQ"/>
+                            <constraint firstItem="4dG-Zl-fXc" firstAttribute="top" secondItem="cQG-4w-WeM" secondAttribute="bottom" constant="11" id="Wbl-8e-JqX"/>
+                            <constraint firstItem="ehT-dP-9BK" firstAttribute="bottom" secondItem="hBO-3n-rb7" secondAttribute="bottom" constant="77" id="YdA-j7-jhp"/>
+                            <constraint firstItem="cQG-4w-WeM" firstAttribute="centerX" secondItem="hBO-3n-rb7" secondAttribute="centerX" id="fmt-L2-Ydc"/>
+                            <constraint firstItem="cQG-4w-WeM" firstAttribute="centerX" secondItem="4dG-Zl-fXc" secondAttribute="centerX" id="xUu-t2-jj2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ehT-dP-9BK"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="SEb-Kh-a5g" appends="YES" id="zW7-bn-vgS"/>
@@ -870,16 +947,17 @@ extra copies of a gene.</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Why Individuals May Respond Differently to Medications" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1b-Wo-t1M">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Why Individuals May Respond Differently to Medications" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1b-Wo-t1M">
                                 <rect key="frame" x="62" y="75" width="250" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ah-lp-MNf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ah-lp-MNf">
                                 <rect key="frame" x="32" y="130" width="311" height="259"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="259" id="usK-7O-ZOR"/>
+                                </constraints>
                                 <string key="text">*Variations of one's genetic profile can change the function of proteins that
 interact with a drug as well as the drug target.
 
@@ -899,7 +977,7 @@ categorized into four groups based on which alleles the individual carries:
                                     <constraint firstAttribute="height" constant="260" id="goH-iZ-tUl"/>
                                 </constraints>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NIQ-lP-sy3">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIQ-lP-sy3">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="rEA-9w-BVM"/>
@@ -919,8 +997,17 @@ categorized into four groups based on which alleles the individual carries:
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="7Ah-lp-MNf" firstAttribute="top" secondItem="V1b-Wo-t1M" secondAttribute="bottom" constant="8" symbolic="YES" id="4kt-pj-Xpe"/>
+                            <constraint firstItem="NIQ-lP-sy3" firstAttribute="leading" secondItem="kgc-T9-uWe" secondAttribute="leading" id="Cpj-ha-TCE"/>
+                            <constraint firstItem="NIQ-lP-sy3" firstAttribute="top" secondItem="GsW-ZM-Efl" secondAttribute="top" id="FXT-4z-4Er"/>
+                            <constraint firstItem="yA0-49-HKu" firstAttribute="top" secondItem="7Ah-lp-MNf" secondAttribute="bottom" constant="8" symbolic="YES" id="V0J-3d-aF9"/>
                             <constraint firstItem="GsW-ZM-Efl" firstAttribute="bottom" secondItem="yA0-49-HKu" secondAttribute="bottom" constant="11" id="V7U-uI-fZg"/>
                             <constraint firstItem="yA0-49-HKu" firstAttribute="trailing" secondItem="kgc-T9-uWe" secondAttribute="trailingMargin" id="ZOx-2V-hhr"/>
+                            <constraint firstItem="NIQ-lP-sy3" firstAttribute="centerX" secondItem="yA0-49-HKu" secondAttribute="centerX" id="Zdu-Km-BBb"/>
+                            <constraint firstItem="V1b-Wo-t1M" firstAttribute="top" secondItem="NIQ-lP-sy3" secondAttribute="bottom" constant="11" id="dWa-gA-qy5"/>
+                            <constraint firstItem="7Ah-lp-MNf" firstAttribute="leading" secondItem="GsW-ZM-Efl" secondAttribute="leading" constant="32" id="dZL-M1-Rq6"/>
+                            <constraint firstItem="NIQ-lP-sy3" firstAttribute="centerX" secondItem="7Ah-lp-MNf" secondAttribute="centerX" id="ex0-yL-hKE"/>
+                            <constraint firstItem="NIQ-lP-sy3" firstAttribute="centerX" secondItem="V1b-Wo-t1M" secondAttribute="centerX" id="k9J-8Z-HNH"/>
                             <constraint firstItem="yA0-49-HKu" firstAttribute="leading" secondItem="kgc-T9-uWe" secondAttribute="leadingMargin" id="uk2-A6-RPw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GsW-ZM-Efl"/>
@@ -949,16 +1036,14 @@ categorized into four groups based on which alleles the individual carries:
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Types of Pharmacogenetic Tests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7T-Zf-KC5">
-                                <rect key="frame" x="67" y="79" width="250" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Types of Pharmacogenetic Tests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7T-Zf-KC5">
+                                <rect key="frame" x="67" y="79" width="251" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rer-bh-hDF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rer-bh-hDF">
                                 <rect key="frame" x="42" y="119" width="300" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">* Drug-disposition: Genes can alter the pharmacokinetics of a drug
 -Pharmacokinetics is the study of the bodily absorption, distribution, metabolism, and excretion of drugs.
 
@@ -968,11 +1053,13 @@ categorized into four groups based on which alleles the individual carries:
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="screen21image" translatesAutoresizingMaskIntoConstraints="NO" id="PVW-Gh-7FV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="screen21image" translatesAutoresizingMaskIntoConstraints="NO" id="PVW-Gh-7FV">
                                 <rect key="frame" x="35" y="367" width="315" height="252"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="252" id="JMe-Zg-HsJ"/>
+                                </constraints>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RF3-Hh-tSU">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RF3-Hh-tSU">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="eER-7x-MQ1"/>
@@ -991,6 +1078,21 @@ categorized into four groups based on which alleles the individual carries:
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="RF3-Hh-tSU" firstAttribute="leading" secondItem="ogm-TA-dk3" secondAttribute="leading" id="7Ij-Xi-Ffn"/>
+                            <constraint firstItem="H7T-Zf-KC5" firstAttribute="leading" secondItem="tnW-VR-2Hv" secondAttribute="leading" constant="67" id="Agi-IP-bDT"/>
+                            <constraint firstItem="H7T-Zf-KC5" firstAttribute="centerX" secondItem="Rer-bh-hDF" secondAttribute="centerX" id="Nsy-b2-avP"/>
+                            <constraint firstItem="PVW-Gh-7FV" firstAttribute="top" secondItem="Rer-bh-hDF" secondAttribute="bottom" constant="8" symbolic="YES" id="VO2-DS-raM"/>
+                            <constraint firstItem="Rer-bh-hDF" firstAttribute="top" secondItem="H7T-Zf-KC5" secondAttribute="bottom" constant="19" id="cmK-IV-2BN"/>
+                            <constraint firstItem="PVW-Gh-7FV" firstAttribute="leading" secondItem="tnW-VR-2Hv" secondAttribute="leading" constant="35" id="f8A-n6-8cy"/>
+                            <constraint firstItem="tnW-VR-2Hv" firstAttribute="bottom" secondItem="PVW-Gh-7FV" secondAttribute="bottom" constant="48" id="fyE-jv-Vqc"/>
+                            <constraint firstItem="H7T-Zf-KC5" firstAttribute="top" secondItem="RF3-Hh-tSU" secondAttribute="bottom" constant="15" id="gYO-d5-Hp4"/>
+                            <constraint firstItem="RF3-Hh-tSU" firstAttribute="top" secondItem="tnW-VR-2Hv" secondAttribute="top" id="j65-FE-VAo"/>
+                            <constraint firstItem="H7T-Zf-KC5" firstAttribute="centerX" secondItem="PVW-Gh-7FV" secondAttribute="centerX" id="luj-Mf-NVW"/>
+                            <constraint firstAttribute="trailing" secondItem="RF3-Hh-tSU" secondAttribute="trailing" id="mIP-Ug-jfp"/>
+                            <constraint firstItem="PVW-Gh-7FV" firstAttribute="top" secondItem="Rer-bh-hDF" secondAttribute="bottom" constant="8" id="mf8-OY-wYc"/>
+                            <constraint firstItem="tnW-VR-2Hv" firstAttribute="trailing" secondItem="PVW-Gh-7FV" secondAttribute="trailing" constant="25" id="ynp-kF-DCo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tnW-VR-2Hv"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="J7z-9a-TMS" appends="YES" id="d99-NI-fch"/>
@@ -1017,20 +1119,17 @@ categorized into four groups based on which alleles the individual carries:
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="screen22image" translatesAutoresizingMaskIntoConstraints="NO" id="vLU-Nc-h24">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="screen22image" translatesAutoresizingMaskIntoConstraints="NO" id="vLU-Nc-h24">
                                 <rect key="frame" x="45" y="101" width="290" height="142"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parent/Active Drug vs. Pro Drug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SU-eZ-fPt">
-                                <rect key="frame" x="66" y="72" width="242" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parent/Active Drug vs. Pro Drug" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SU-eZ-fPt">
+                                <rect key="frame" x="66.5" y="72" width="242" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m36-qd-uzO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m36-qd-uzO">
                                 <rect key="frame" x="42" y="251" width="296" height="164"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <string key="text">Parent/Active Drug: Formulated with the active form of the drug
 
 Pro Drug: Formulated in its inactive state and must be broken down by enzymes in the body to produce active metabolites.</string>
@@ -1038,11 +1137,13 @@ Pro Drug: Formulated in its inactive state and must be broken down by enzymes in
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="screen22image2" translatesAutoresizingMaskIntoConstraints="NO" id="fs4-as-Bur">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="screen22image2" translatesAutoresizingMaskIntoConstraints="NO" id="fs4-as-Bur">
                                 <rect key="frame" x="26" y="433" width="322" height="191"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="191" id="RNA-hb-aBW"/>
+                                </constraints>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="44X-fS-rx6">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44X-fS-rx6">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="zEU-pI-alS"/>
@@ -1061,6 +1162,22 @@ Pro Drug: Formulated in its inactive state and must be broken down by enzymes in
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="m36-qd-uzO" firstAttribute="centerY" secondItem="TUo-0a-hin" secondAttribute="centerY" id="4i0-SI-pLd"/>
+                            <constraint firstItem="fs4-as-Bur" firstAttribute="top" secondItem="m36-qd-uzO" secondAttribute="bottom" constant="18" id="65c-eb-DB1"/>
+                            <constraint firstItem="44X-fS-rx6" firstAttribute="top" secondItem="CKv-p5-hgZ" secondAttribute="top" id="ACK-09-Hoh"/>
+                            <constraint firstItem="CKv-p5-hgZ" firstAttribute="bottom" secondItem="fs4-as-Bur" secondAttribute="bottom" constant="43" id="Cq4-c7-njY"/>
+                            <constraint firstItem="fs4-as-Bur" firstAttribute="leading" secondItem="CKv-p5-hgZ" secondAttribute="leading" constant="26" id="Jar-tR-AiC"/>
+                            <constraint firstItem="1SU-eZ-fPt" firstAttribute="top" secondItem="44X-fS-rx6" secondAttribute="bottom" constant="8" id="LoZ-bs-yYm"/>
+                            <constraint firstItem="44X-fS-rx6" firstAttribute="centerX" secondItem="fs4-as-Bur" secondAttribute="centerX" id="PMD-9D-dET"/>
+                            <constraint firstItem="m36-qd-uzO" firstAttribute="top" secondItem="vLU-Nc-h24" secondAttribute="bottom" constant="8" symbolic="YES" id="YAg-VD-Gl5"/>
+                            <constraint firstItem="44X-fS-rx6" firstAttribute="centerX" secondItem="1SU-eZ-fPt" secondAttribute="centerX" id="ao6-sU-gjq"/>
+                            <constraint firstAttribute="trailing" secondItem="44X-fS-rx6" secondAttribute="trailing" id="eqg-N7-s0a"/>
+                            <constraint firstItem="44X-fS-rx6" firstAttribute="leading" secondItem="TUo-0a-hin" secondAttribute="leading" id="gYy-nZ-1RE"/>
+                            <constraint firstItem="m36-qd-uzO" firstAttribute="leading" secondItem="CKv-p5-hgZ" secondAttribute="leading" constant="42" id="mXV-8A-7Of"/>
+                            <constraint firstItem="CKv-p5-hgZ" firstAttribute="trailing" secondItem="m36-qd-uzO" secondAttribute="trailing" constant="37" id="spt-ul-pN0"/>
+                            <constraint firstItem="m36-qd-uzO" firstAttribute="centerX" secondItem="vLU-Nc-h24" secondAttribute="centerX" id="tN7-Pw-dux"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="CKv-p5-hgZ"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="YvE-Uo-v39" appends="YES" id="VIK-DF-q4m"/>
@@ -1088,16 +1205,16 @@ Pro Drug: Formulated in its inactive state and must be broken down by enzymes in
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evidence-Based Sources" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kh-er-JIN">
-                                <rect key="frame" x="91.5" y="82" width="192" height="21"/>
+                                <rect key="frame" x="92" y="82" width="191" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="lja-yt-bbu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUT-UI-hjX">
-                                <rect key="frame" x="32" y="120" width="310" height="333"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="333" id="EEN-a4-AfO"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUT-UI-hjX">
+                                <rect key="frame" x="-441.5" y="120" width="1258" height="333"/>
                                 <string key="text">*This information compiled within this application utilizes evidence-based guidelines published by the Clinical Pharmacogenetics Implementation Consortium (CPIC).
 
 *This is a project that culminated from a partnership between PharmGKB and the Pharmacogenomics Research Network (PGRN).
@@ -1108,26 +1225,28 @@ evidence-based, peer-reviewed, publicly available, non-profit gene/drug guidelin
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlB-ck-lba">
-                                <rect key="frame" x="32" y="461" width="310" height="67"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlB-ck-lba">
+                                <rect key="frame" x="51" y="461" width="273" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="B2c-Pb-Yhp"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="screen23image1"/>
                                 <connections>
                                     <action selector="CPICButtonClickWithSender:" destination="R8t-VI-Mse" eventType="touchUpInside" id="VlP-jl-QxH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZl-DC-wAx">
-                                <rect key="frame" x="196" y="536" width="146" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZl-DC-wAx">
+                                <rect key="frame" x="-170.5" y="541" width="200.5" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="N1U-WV-JXL"/>
+                                </constraints>
                                 <state key="normal" title="Button" image="screen23image3"/>
                                 <connections>
                                     <action selector="PGRNClickedWithSender:" destination="R8t-VI-Mse" eventType="touchUpInside" id="JD4-J4-nwm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ocl-LR-6Gb">
-                                <rect key="frame" x="32" y="547" width="146" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="146" id="f3C-eI-x37"/>
-                                    <constraint firstAttribute="height" constant="100" id="sf4-gu-zjJ"/>
-                                </constraints>
+                                <rect key="frame" x="-441.5" y="552" width="253" height="100"/>
                                 <state key="normal" title="Button" image="screen23image2"/>
                                 <connections>
                                     <action selector="PharmGKBClickedWithSender:" destination="R8t-VI-Mse" eventType="touchUpInside" id="pJO-E1-dUX"/>
@@ -1135,9 +1254,6 @@ evidence-based, peer-reviewed, publicly available, non-profit gene/drug guidelin
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qa7-51-5PK">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="MSE-ah-IbJ"/>
-                                </constraints>
                                 <items>
                                     <navigationItem id="r6W-kh-rGn">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="e7R-Ha-W7w"/>
@@ -1153,27 +1269,23 @@ evidence-based, peer-reviewed, publicly available, non-profit gene/drug guidelin
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Ocl-LR-6Gb" firstAttribute="leading" secondItem="PYQ-p7-gIi" secondAttribute="leading" constant="32" id="2Ec-FB-TFF"/>
-                            <constraint firstAttribute="trailing" secondItem="qa7-51-5PK" secondAttribute="trailing" id="5w5-EA-exG"/>
-                            <constraint firstItem="NUT-UI-hjX" firstAttribute="top" secondItem="8Kh-er-JIN" secondAttribute="bottom" constant="17" id="6eY-iU-Hec"/>
-                            <constraint firstItem="BZl-DC-wAx" firstAttribute="baseline" secondItem="Ocl-LR-6Gb" secondAttribute="baseline" id="8Vh-e9-VzG"/>
-                            <constraint firstItem="NUT-UI-hjX" firstAttribute="leading" secondItem="vlB-ck-lba" secondAttribute="leading" id="JbX-g9-1jN"/>
-                            <constraint firstItem="qa7-51-5PK" firstAttribute="centerX" secondItem="vlB-ck-lba" secondAttribute="centerX" id="KZ2-Le-YbZ"/>
-                            <constraint firstItem="qa7-51-5PK" firstAttribute="centerX" secondItem="NUT-UI-hjX" secondAttribute="centerX" id="NMY-3Q-p2w"/>
-                            <constraint firstItem="vlB-ck-lba" firstAttribute="top" secondItem="NUT-UI-hjX" secondAttribute="bottom" constant="8" symbolic="YES" id="PNe-cq-bdD"/>
-                            <constraint firstItem="NUT-UI-hjX" firstAttribute="leading" secondItem="Ocl-LR-6Gb" secondAttribute="leading" id="Rwp-sa-02I"/>
-                            <constraint firstItem="qa7-51-5PK" firstAttribute="leading" secondItem="C37-QZ-vmQ" secondAttribute="leading" id="TT5-px-ldZ"/>
-                            <constraint firstItem="BZl-DC-wAx" firstAttribute="firstBaseline" secondItem="Ocl-LR-6Gb" secondAttribute="baseline" id="UgW-4o-Dgb"/>
-                            <constraint firstItem="NUT-UI-hjX" firstAttribute="trailing" secondItem="BZl-DC-wAx" secondAttribute="trailing" id="Xva-1Y-SJq"/>
-                            <constraint firstItem="qa7-51-5PK" firstAttribute="top" secondItem="PYQ-p7-gIi" secondAttribute="top" id="bPk-IZ-tlV"/>
-                            <constraint firstItem="8Kh-er-JIN" firstAttribute="top" secondItem="qa7-51-5PK" secondAttribute="bottom" constant="18" id="co0-Hl-IiC"/>
-                            <constraint firstAttribute="bottom" secondItem="Ocl-LR-6Gb" secondAttribute="bottom" constant="20" symbolic="YES" id="gei-e8-TcH"/>
-                            <constraint firstItem="qa7-51-5PK" firstAttribute="centerX" secondItem="8Kh-er-JIN" secondAttribute="centerX" id="guL-52-nsE"/>
-                            <constraint firstItem="BZl-DC-wAx" firstAttribute="top" secondItem="vlB-ck-lba" secondAttribute="bottom" constant="8" id="iAR-Pn-j1D"/>
-                            <constraint firstItem="BZl-DC-wAx" firstAttribute="top" secondItem="vlB-ck-lba" secondAttribute="bottom" constant="8" symbolic="YES" id="ixw-9e-MGn"/>
-                            <constraint firstItem="Ocl-LR-6Gb" firstAttribute="top" secondItem="vlB-ck-lba" secondAttribute="bottom" constant="19" id="tyX-rr-Kri"/>
-                            <constraint firstItem="BZl-DC-wAx" firstAttribute="leading" secondItem="Ocl-LR-6Gb" secondAttribute="trailing" constant="18" id="u0B-Yu-m6q"/>
-                            <constraint firstItem="PYQ-p7-gIi" firstAttribute="bottom" secondItem="BZl-DC-wAx" secondAttribute="bottom" constant="31" id="u3e-Tc-Dbd"/>
+                            <constraint firstItem="NUT-UI-hjX" firstAttribute="centerX" secondItem="vlB-ck-lba" secondAttribute="centerX" id="5c8-ba-SW1"/>
+                            <constraint firstItem="qa7-51-5PK" firstAttribute="centerX" secondItem="NUT-UI-hjX" secondAttribute="centerX" id="BEO-cn-8dt"/>
+                            <constraint firstItem="vlB-ck-lba" firstAttribute="top" secondItem="NUT-UI-hjX" secondAttribute="bottom" constant="8" symbolic="YES" id="BvI-xq-vtg"/>
+                            <constraint firstItem="8Kh-er-JIN" firstAttribute="top" secondItem="qa7-51-5PK" secondAttribute="bottom" constant="18" id="Cml-nv-ehL"/>
+                            <constraint firstItem="BZl-DC-wAx" firstAttribute="leading" secondItem="Ocl-LR-6Gb" secondAttribute="trailing" constant="18" id="H2l-He-FaZ"/>
+                            <constraint firstItem="PYQ-p7-gIi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BZl-DC-wAx" secondAttribute="trailing" symbolic="YES" id="JrT-x1-47z"/>
+                            <constraint firstItem="NUT-UI-hjX" firstAttribute="top" secondItem="8Kh-er-JIN" secondAttribute="bottom" constant="17" id="Lv4-4O-vb4"/>
+                            <constraint firstItem="qa7-51-5PK" firstAttribute="centerX" secondItem="8Kh-er-JIN" secondAttribute="centerX" id="MHV-JS-8Nb"/>
+                            <constraint firstItem="PYQ-p7-gIi" firstAttribute="bottom" secondItem="BZl-DC-wAx" secondAttribute="bottom" constant="31" id="Ygg-d1-Y6d"/>
+                            <constraint firstAttribute="trailing" secondItem="qa7-51-5PK" secondAttribute="trailing" id="ZvQ-g4-gh9"/>
+                            <constraint firstItem="Ocl-LR-6Gb" firstAttribute="top" secondItem="vlB-ck-lba" secondAttribute="bottom" constant="19" id="dRV-sD-yv4"/>
+                            <constraint firstItem="NUT-UI-hjX" firstAttribute="leading" secondItem="Ocl-LR-6Gb" secondAttribute="leading" id="fXl-O3-zj8"/>
+                            <constraint firstItem="PYQ-p7-gIi" firstAttribute="bottom" secondItem="Ocl-LR-6Gb" secondAttribute="bottom" constant="15" id="gNv-P3-fzR"/>
+                            <constraint firstItem="qa7-51-5PK" firstAttribute="top" secondItem="PYQ-p7-gIi" secondAttribute="top" id="kjq-25-j4C"/>
+                            <constraint firstItem="8Kh-er-JIN" firstAttribute="leading" secondItem="PYQ-p7-gIi" secondAttribute="leading" constant="92" id="mXq-2Q-swS"/>
+                            <constraint firstItem="qa7-51-5PK" firstAttribute="leading" secondItem="C37-QZ-vmQ" secondAttribute="leading" id="pbs-AU-8pv"/>
+                            <constraint firstItem="BZl-DC-wAx" firstAttribute="top" secondItem="vlB-ck-lba" secondAttribute="bottom" constant="8" symbolic="YES" id="zc3-1v-ptY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PYQ-p7-gIi"/>
                         <connections>
@@ -1287,41 +1399,33 @@ evidence-based, peer-reviewed, publicly available, non-profit gene/drug guidelin
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9NM-Fc-IjM" userLabel="GenePicker">
-                                <rect key="frame" x="34" y="384.5" width="320" height="255.5"/>
+                                <rect key="frame" x="34" y="386" width="320" height="255"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Le-GO-tf0">
-                                <rect key="frame" x="182" y="205.5" width="84" height="30"/>
+                                <rect key="frame" x="216" y="219" width="89" height="30"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5V-mx-0sN">
-                                <rect key="frame" x="182" y="318.5" width="84" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Xhb-gU-6ba"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6R-q0-pqK">
-                                <rect key="frame" x="182" y="205.5" width="84" height="30"/>
+                                <rect key="frame" x="216" y="211.5" width="89" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Select Gene"/>
                                 <connections>
                                     <action selector="GenePickerBtnPressed:" destination="8zB-41-42w" eventType="touchUpInside" id="I7F-74-Dn3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rE3-xx-UQl">
-                                <rect key="frame" x="182" y="318.5" width="84" height="30"/>
-                                <state key="normal" title="Select Drug"/>
-                                <connections>
-                                    <action selector="DrugPickerBtnPressed:" destination="8zB-41-42w" eventType="touchUpInside" id="mt9-2B-TUr"/>
-                                </connections>
-                            </button>
-                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXp-uS-pEH" userLabel="DrugPicker">
+                            <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BXp-uS-pEH" userLabel="DrugPicker">
                                 <rect key="frame" x="19" y="360" width="340" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hq5-aU-Yuq">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hq5-aU-Yuq">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="uZi-1T-D2l">
                                         <nil key="title"/>
@@ -1339,52 +1443,63 @@ evidence-based, peer-reviewed, publicly available, non-profit gene/drug guidelin
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dosing Guidelines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqX-QL-Twn">
-                                <rect key="frame" x="120" y="80" width="138" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dosing Guidelines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xqX-QL-Twn">
+                                <rect key="frame" x="63" y="102" width="249" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gene:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWL-nj-mf1">
+                                <rect key="frame" x="63" y="208" width="83" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emF-Zb-Fqf">
+                                <rect key="frame" x="63" y="323" width="77" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5V-mx-0sN">
+                                <rect key="frame" x="221" y="343" width="0.0" height="0.0"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gene:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWL-nj-mf1">
-                                <rect key="frame" x="34" y="210" width="46" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Drug:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emF-Zb-Fqf">
-                                <rect key="frame" x="34" y="323" width="43" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rE3-xx-UQl">
+                                <rect key="frame" x="219" y="327" width="86" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Select Drug"/>
+                                <connections>
+                                    <action selector="DrugPickerBtnPressed:" destination="8zB-41-42w" eventType="touchUpInside" id="mt9-2B-TUr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="U5V-mx-0sN" firstAttribute="bottom" secondItem="rE3-xx-UQl" secondAttribute="bottom" id="09X-87-u3n"/>
-                            <constraint firstItem="k6e-q1-rzs" firstAttribute="bottom" secondItem="BXp-uS-pEH" secondAttribute="bottom" constant="91" id="1sG-TJ-TYl"/>
-                            <constraint firstItem="hq5-aU-Yuq" firstAttribute="leading" secondItem="Ifu-u4-RiE" secondAttribute="leading" id="2pb-I9-BC3"/>
-                            <constraint firstItem="w6R-q0-pqK" firstAttribute="leading" secondItem="2Le-GO-tf0" secondAttribute="leading" id="5S2-DO-0fg"/>
-                            <constraint firstItem="2Le-GO-tf0" firstAttribute="top" secondItem="w6R-q0-pqK" secondAttribute="top" id="5o8-TD-VnU"/>
-                            <constraint firstItem="k6e-q1-rzs" firstAttribute="bottom" secondItem="9NM-Fc-IjM" secondAttribute="bottom" constant="27" id="6Hk-PG-BsS"/>
-                            <constraint firstItem="w6R-q0-pqK" firstAttribute="bottom" secondItem="2Le-GO-tf0" secondAttribute="bottom" id="CgG-MP-tKj"/>
-                            <constraint firstItem="9NM-Fc-IjM" firstAttribute="leading" secondItem="k6e-q1-rzs" secondAttribute="leading" constant="34" id="D3u-sd-rij"/>
-                            <constraint firstItem="U5V-mx-0sN" firstAttribute="top" secondItem="rE3-xx-UQl" secondAttribute="top" id="Ide-ex-Pm5"/>
-                            <constraint firstItem="9NM-Fc-IjM" firstAttribute="top" secondItem="rE3-xx-UQl" secondAttribute="bottom" constant="36" id="OOz-oH-YdD"/>
-                            <constraint firstItem="2Le-GO-tf0" firstAttribute="leading" secondItem="rE3-xx-UQl" secondAttribute="leading" id="Tpg-Nn-FQt"/>
-                            <constraint firstItem="w6R-q0-pqK" firstAttribute="trailing" secondItem="2Le-GO-tf0" secondAttribute="trailing" id="UFu-0N-3dM"/>
-                            <constraint firstItem="rE3-xx-UQl" firstAttribute="leading" secondItem="U5V-mx-0sN" secondAttribute="leading" id="ZUA-72-ru0"/>
-                            <constraint firstItem="U5V-mx-0sN" firstAttribute="trailing" secondItem="rE3-xx-UQl" secondAttribute="trailing" id="arB-Pm-umh"/>
-                            <constraint firstItem="U5V-mx-0sN" firstAttribute="top" secondItem="w6R-q0-pqK" secondAttribute="bottom" constant="83" id="bEP-4f-DF8"/>
-                            <constraint firstItem="BXp-uS-pEH" firstAttribute="leading" secondItem="k6e-q1-rzs" secondAttribute="leading" constant="19" id="dS9-7l-H9v"/>
-                            <constraint firstAttribute="trailing" secondItem="hq5-aU-Yuq" secondAttribute="trailing" id="iHR-Kb-5VQ"/>
-                            <constraint firstItem="2Le-GO-tf0" firstAttribute="trailing" secondItem="U5V-mx-0sN" secondAttribute="trailing" id="pF9-3v-puG"/>
-                            <constraint firstItem="hq5-aU-Yuq" firstAttribute="top" secondItem="k6e-q1-rzs" secondAttribute="top" id="qLT-lu-65O"/>
-                            <constraint firstItem="k6e-q1-rzs" firstAttribute="trailing" secondItem="2Le-GO-tf0" secondAttribute="trailing" constant="109" id="uTI-iY-bbs"/>
-                            <constraint firstItem="U5V-mx-0sN" firstAttribute="centerY" secondItem="Ifu-u4-RiE" secondAttribute="centerY" id="zMT-e6-1dr"/>
-                            <constraint firstItem="BXp-uS-pEH" firstAttribute="trailing" secondItem="Ifu-u4-RiE" secondAttribute="trailingMargin" id="zcX-tw-fuG"/>
+                            <constraint firstItem="2Le-GO-tf0" firstAttribute="top" secondItem="Ifu-u4-RiE" secondAttribute="top" constant="219" id="25G-gF-dXl"/>
+                            <constraint firstItem="emF-Zb-Fqf" firstAttribute="leading" secondItem="cWL-nj-mf1" secondAttribute="leading" id="2es-aV-ld1"/>
+                            <constraint firstItem="2Le-GO-tf0" firstAttribute="leading" secondItem="w6R-q0-pqK" secondAttribute="leading" id="30h-3G-ipQ"/>
+                            <constraint firstItem="emF-Zb-Fqf" firstAttribute="centerY" secondItem="U5V-mx-0sN" secondAttribute="centerY" id="8qb-pU-kVR"/>
+                            <constraint firstItem="rE3-xx-UQl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="emF-Zb-Fqf" secondAttribute="trailing" constant="8" symbolic="YES" id="CT9-M1-gt3"/>
+                            <constraint firstItem="emF-Zb-Fqf" firstAttribute="top" secondItem="Ifu-u4-RiE" secondAttribute="top" constant="323" id="I3s-qr-dt6"/>
+                            <constraint firstItem="w6R-q0-pqK" firstAttribute="centerY" secondItem="cWL-nj-mf1" secondAttribute="centerY" id="J5o-0M-0Hr"/>
+                            <constraint firstItem="emF-Zb-Fqf" firstAttribute="top" secondItem="cWL-nj-mf1" secondAttribute="bottom" constant="76" id="LzY-6L-Jhq"/>
+                            <constraint firstItem="k6e-q1-rzs" firstAttribute="bottom" secondItem="9NM-Fc-IjM" secondAttribute="bottom" constant="26" id="M1K-cU-p1c"/>
+                            <constraint firstItem="U5V-mx-0sN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="emF-Zb-Fqf" secondAttribute="trailing" constant="8" symbolic="YES" id="MRP-oD-xGO"/>
+                            <constraint firstItem="emF-Zb-Fqf" firstAttribute="centerY" secondItem="rE3-xx-UQl" secondAttribute="centerY" id="NIb-Rm-kaV"/>
+                            <constraint firstAttribute="trailing" secondItem="U5V-mx-0sN" secondAttribute="trailing" constant="154" id="UT6-NN-HGZ"/>
+                            <constraint firstItem="2Le-GO-tf0" firstAttribute="trailing" secondItem="w6R-q0-pqK" secondAttribute="trailing" id="YK4-3n-K5d"/>
+                            <constraint firstItem="9NM-Fc-IjM" firstAttribute="leading" secondItem="k6e-q1-rzs" secondAttribute="leading" constant="34" id="gOA-hv-8m9"/>
+                            <constraint firstItem="9NM-Fc-IjM" firstAttribute="top" secondItem="emF-Zb-Fqf" secondAttribute="bottom" constant="23" id="hOl-Dt-HSQ"/>
+                            <constraint firstItem="2Le-GO-tf0" firstAttribute="top" secondItem="xqX-QL-Twn" secondAttribute="bottom" constant="78" id="lUh-0e-J7s"/>
+                            <constraint firstItem="k6e-q1-rzs" firstAttribute="trailing" secondItem="rE3-xx-UQl" secondAttribute="trailing" constant="70" id="o6C-LF-Rxc"/>
+                            <constraint firstItem="xqX-QL-Twn" firstAttribute="centerX" secondItem="Ifu-u4-RiE" secondAttribute="centerX" id="up7-Jj-y7P"/>
+                            <constraint firstItem="rE3-xx-UQl" firstAttribute="top" secondItem="2Le-GO-tf0" secondAttribute="bottom" constant="78" id="vPb-pK-iOz"/>
+                            <constraint firstItem="cWL-nj-mf1" firstAttribute="centerX" secondItem="Ifu-u4-RiE" secondAttribute="centerX" constant="-83" id="whJ-Xm-JAA"/>
+                            <constraint firstItem="2Le-GO-tf0" firstAttribute="trailing" secondItem="rE3-xx-UQl" secondAttribute="trailing" id="xPx-px-Xdj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k6e-q1-rzs"/>
                     </view>
@@ -1409,45 +1524,35 @@ evidence-based, peer-reviewed, publicly available, non-profit gene/drug guidelin
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Drug" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lf2-U9-6Xu">
-                                <rect key="frame" x="168" y="159" width="38" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drug" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lf2-U9-6Xu">
+                                <rect key="frame" x="168" y="213" width="36" height="26"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="x60-cY-fFZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.32947236299514771" green="0.55299973487854004" blue="0.70607751607894897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nt8-Zg-yXq">
-                                <rect key="frame" x="231" y="266" width="120" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nt8-Zg-yXq">
+                                <rect key="frame" x="262" y="335" width="82" height="50"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQJ-2t-E67">
-                                <rect key="frame" x="37" y="266" width="120" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQJ-2t-E67">
+                                <rect key="frame" x="30" y="335" width="129" height="50"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="ffN-xP-Dyg"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mou-Ah-hnX">
-                                <rect key="frame" x="231" y="266" width="120" height="50"/>
-                                <state key="normal" title="Allele2"/>
-                                <connections>
-                                    <action selector="Allele2BtnPressed:" destination="GIa-a6-p07" eventType="touchUpInside" id="uhN-6A-326"/>
-                                </connections>
-                            </button>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="heK-xc-Xyx" userLabel="Allele1Picker">
-                                <rect key="frame" x="16" y="378" width="343" height="224"/>
+                                <rect key="frame" x="16" y="386" width="343" height="216"/>
                             </pickerView>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIK-hf-dLV" userLabel="Allele2Picker">
-                                <rect key="frame" x="5" y="382" width="320" height="216"/>
+                                <rect key="frame" x="27" y="387" width="320" height="282"/>
                             </pickerView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ygc-e9-GL7">
                                 <rect key="frame" x="0.0" y="24" width="375" height="44"/>
@@ -1469,18 +1574,18 @@ evidence-based, peer-reviewed, publicly available, non-profit gene/drug guidelin
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gene" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbL-qm-7yH">
-                                <rect key="frame" x="108" y="96" width="159" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gene" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbL-qm-7yH">
+                                <rect key="frame" x="168" y="134" width="38.5" height="28"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="Pm6-ql-pUz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.32947236299514771" green="0.55299973487854004" blue="0.70607751607894897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7V-jE-YMj">
-                                <rect key="frame" x="37" y="266" width="120" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7V-jE-YMj">
+                                <rect key="frame" x="30" y="335" width="117" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gnG-NN-VEb"/>
                                 </constraints>
@@ -1489,58 +1594,69 @@ evidence-based, peer-reviewed, publicly available, non-profit gene/drug guidelin
                                     <action selector="Allele1BtnPressed:" destination="GIa-a6-p07" eventType="touchUpInside" id="PM4-A7-rHY"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pick the alleles:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htF-gd-nPZ">
-                                <rect key="frame" x="136" y="228" width="119" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick the alleles:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htF-gd-nPZ">
+                                <rect key="frame" x="81.5" y="266" width="211" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUY-Vb-gJi">
+                                <rect key="frame" x="172.5" y="175" width="29" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="and" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUY-Vb-gJi">
-                                <rect key="frame" x="173" y="130" width="29" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dosing guidelines for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRZ-S4-QHT">
+                                <rect key="frame" x="43" y="87" width="288" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dosing guidelines for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRZ-S4-QHT">
-                                <rect key="frame" x="108" y="68" width="162" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mou-Ah-hnX">
+                                <rect key="frame" x="246" y="329" width="113" height="50"/>
+                                <state key="normal" title="Allele2"/>
+                                <connections>
+                                    <action selector="Allele2BtnPressed:" destination="GIa-a6-p07" eventType="touchUpInside" id="uhN-6A-326"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="A7V-jE-YMj" firstAttribute="trailing" secondItem="QQJ-2t-E67" secondAttribute="trailing" id="0Jn-D5-I5c"/>
-                            <constraint firstItem="RbL-qm-7yH" firstAttribute="leading" secondItem="Ixd-Xa-A0O" secondAttribute="leading" constant="113" id="0h4-w6-3oL"/>
+                            <constraint firstItem="QQJ-2t-E67" firstAttribute="top" secondItem="A7V-jE-YMj" secondAttribute="top" id="1o2-6X-1c2"/>
                             <constraint firstItem="Ygc-e9-GL7" firstAttribute="centerX" secondItem="heK-xc-Xyx" secondAttribute="centerX" id="2ME-Dg-oXW"/>
-                            <constraint firstItem="QQJ-2t-E67" firstAttribute="top" secondItem="A7V-jE-YMj" secondAttribute="top" id="5QW-Zt-NQQ"/>
+                            <constraint firstItem="QQJ-2t-E67" firstAttribute="firstBaseline" secondItem="Nt8-Zg-yXq" secondAttribute="firstBaseline" id="809-aV-M8l"/>
+                            <constraint firstItem="htF-gd-nPZ" firstAttribute="centerX" secondItem="ZIK-hf-dLV" secondAttribute="centerX" id="8Nu-tW-1hd"/>
                             <constraint firstItem="heK-xc-Xyx" firstAttribute="leading" secondItem="d0W-f5-APL" secondAttribute="leadingMargin" id="9hQ-7Q-yqR"/>
-                            <constraint firstItem="Mou-Ah-hnX" firstAttribute="leading" secondItem="Nt8-Zg-yXq" secondAttribute="leading" id="HB0-GV-vTo"/>
-                            <constraint firstItem="RbL-qm-7yH" firstAttribute="top" secondItem="Ygc-e9-GL7" secondAttribute="bottom" constant="30" id="Hxb-fC-95O"/>
-                            <constraint firstItem="ZIK-hf-dLV" firstAttribute="centerY" secondItem="heK-xc-Xyx" secondAttribute="centerY" id="Hy6-HK-eRJ"/>
-                            <constraint firstItem="lf2-U9-6Xu" firstAttribute="top" secondItem="RbL-qm-7yH" secondAttribute="bottom" constant="33" id="LgB-FF-wBy"/>
+                            <constraint firstItem="QQJ-2t-E67" firstAttribute="baseline" secondItem="Nt8-Zg-yXq" secondAttribute="baseline" id="E27-U4-aFX"/>
+                            <constraint firstItem="dUY-Vb-gJi" firstAttribute="top" secondItem="RbL-qm-7yH" secondAttribute="bottom" constant="13" id="Efn-Le-gyC"/>
+                            <constraint firstItem="Mou-Ah-hnX" firstAttribute="leading" secondItem="Nt8-Zg-yXq" secondAttribute="leading" constant="-16" id="HB0-GV-vTo"/>
+                            <constraint firstItem="htF-gd-nPZ" firstAttribute="centerX" secondItem="dUY-Vb-gJi" secondAttribute="centerX" id="HiJ-Uc-kfm"/>
+                            <constraint firstItem="RbL-qm-7yH" firstAttribute="top" secondItem="Ygc-e9-GL7" secondAttribute="bottom" constant="66" id="Hxb-fC-95O"/>
+                            <constraint firstItem="ZIK-hf-dLV" firstAttribute="centerY" secondItem="heK-xc-Xyx" secondAttribute="centerY" constant="34" id="Hy6-HK-eRJ"/>
+                            <constraint firstItem="QQJ-2t-E67" firstAttribute="leading" secondItem="A7V-jE-YMj" secondAttribute="leading" id="LKC-7w-4FT"/>
+                            <constraint firstItem="lf2-U9-6Xu" firstAttribute="top" secondItem="RbL-qm-7yH" secondAttribute="bottom" constant="51" id="LgB-FF-wBy"/>
                             <constraint firstItem="Ixd-Xa-A0O" firstAttribute="bottom" secondItem="heK-xc-Xyx" secondAttribute="bottom" constant="65" id="LgD-WX-yW5"/>
+                            <constraint firstItem="heK-xc-Xyx" firstAttribute="top" secondItem="QQJ-2t-E67" secondAttribute="bottom" constant="1" id="Llp-lr-grb"/>
+                            <constraint firstItem="htF-gd-nPZ" firstAttribute="centerX" secondItem="ZRZ-S4-QHT" secondAttribute="centerX" id="Ml4-ZC-naY"/>
                             <constraint firstItem="Ygc-e9-GL7" firstAttribute="leading" secondItem="d0W-f5-APL" secondAttribute="leading" id="NAl-WC-443"/>
-                            <constraint firstItem="Mou-Ah-hnX" firstAttribute="top" secondItem="Nt8-Zg-yXq" secondAttribute="top" id="RuS-4n-lJK"/>
-                            <constraint firstItem="heK-xc-Xyx" firstAttribute="top" secondItem="A7V-jE-YMj" secondAttribute="bottom" constant="62" id="TXR-Je-EbT"/>
+                            <constraint firstItem="htF-gd-nPZ" firstAttribute="centerX" secondItem="RbL-qm-7yH" secondAttribute="centerX" id="REd-SM-lcr"/>
+                            <constraint firstItem="Mou-Ah-hnX" firstAttribute="top" secondItem="Nt8-Zg-yXq" secondAttribute="top" constant="-6" id="RuS-4n-lJK"/>
+                            <constraint firstItem="Ixd-Xa-A0O" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lf2-U9-6Xu" secondAttribute="trailing" symbolic="YES" id="T1g-5p-2bo"/>
                             <constraint firstItem="Ygc-e9-GL7" firstAttribute="top" secondItem="Ixd-Xa-A0O" secondAttribute="top" constant="4" id="Uc8-k6-FD2"/>
+                            <constraint firstItem="QQJ-2t-E67" firstAttribute="trailing" secondItem="A7V-jE-YMj" secondAttribute="trailing" constant="12" id="VZc-b2-pQw"/>
                             <constraint firstAttribute="trailing" secondItem="Ygc-e9-GL7" secondAttribute="trailing" id="Vy5-QA-Svl"/>
-                            <constraint firstItem="Nt8-Zg-yXq" firstAttribute="leading" secondItem="A7V-jE-YMj" secondAttribute="trailing" constant="74" id="XQh-K8-5kh"/>
-                            <constraint firstItem="lf2-U9-6Xu" firstAttribute="leading" secondItem="Ixd-Xa-A0O" secondAttribute="leading" constant="116" id="Z56-4S-rdm"/>
-                            <constraint firstItem="ZIK-hf-dLV" firstAttribute="top" secondItem="Nt8-Zg-yXq" secondAttribute="bottom" constant="66" id="ZO3-hs-gCw"/>
-                            <constraint firstItem="QQJ-2t-E67" firstAttribute="leading" secondItem="A7V-jE-YMj" secondAttribute="leading" id="cUg-sZ-sYc"/>
-                            <constraint firstItem="QQJ-2t-E67" firstAttribute="firstBaseline" secondItem="Nt8-Zg-yXq" secondAttribute="firstBaseline" id="cqc-Th-aef"/>
-                            <constraint firstItem="QQJ-2t-E67" firstAttribute="baseline" secondItem="Nt8-Zg-yXq" secondAttribute="baseline" id="csE-OU-0um"/>
-                            <constraint firstItem="A7V-jE-YMj" firstAttribute="baseline" secondItem="Mou-Ah-hnX" secondAttribute="firstBaseline" id="fH5-gC-0Bs"/>
-                            <constraint firstItem="A7V-jE-YMj" firstAttribute="leading" secondItem="Ixd-Xa-A0O" secondAttribute="leading" constant="37" id="nOg-z8-ZgQ"/>
-                            <constraint firstItem="ZIK-hf-dLV" firstAttribute="leading" secondItem="Ixd-Xa-A0O" secondAttribute="leading" constant="5" id="pLH-Pb-f1E"/>
-                            <constraint firstItem="Nt8-Zg-yXq" firstAttribute="trailing" secondItem="Mou-Ah-hnX" secondAttribute="trailing" id="uaj-bu-GI8"/>
-                            <constraint firstItem="QQJ-2t-E67" firstAttribute="bottom" secondItem="A7V-jE-YMj" secondAttribute="bottom" id="uv5-QC-vRX"/>
-                            <constraint firstItem="Ixd-Xa-A0O" firstAttribute="trailing" secondItem="Nt8-Zg-yXq" secondAttribute="trailing" constant="24" id="vCQ-yI-7nJ"/>
-                            <constraint firstItem="Ixd-Xa-A0O" firstAttribute="trailing" secondItem="RbL-qm-7yH" secondAttribute="trailing" constant="103" id="yTK-TI-Sq4"/>
+                            <constraint firstItem="Nt8-Zg-yXq" firstAttribute="leading" secondItem="A7V-jE-YMj" secondAttribute="trailing" constant="115" id="XQh-K8-5kh"/>
+                            <constraint firstItem="RbL-qm-7yH" firstAttribute="top" secondItem="ZRZ-S4-QHT" secondAttribute="bottom" constant="8" symbolic="YES" id="XQq-9v-jTr"/>
+                            <constraint firstItem="lf2-U9-6Xu" firstAttribute="leading" secondItem="Ixd-Xa-A0O" secondAttribute="leading" constant="168" id="Z56-4S-rdm"/>
+                            <constraint firstItem="ZIK-hf-dLV" firstAttribute="top" secondItem="Nt8-Zg-yXq" secondAttribute="bottom" constant="2" id="ZO3-hs-gCw"/>
+                            <constraint firstItem="A7V-jE-YMj" firstAttribute="baseline" secondItem="Mou-Ah-hnX" secondAttribute="firstBaseline" constant="6" id="fH5-gC-0Bs"/>
+                            <constraint firstItem="QQJ-2t-E67" firstAttribute="bottom" secondItem="A7V-jE-YMj" secondAttribute="bottom" id="jGS-E4-bkJ"/>
+                            <constraint firstItem="A7V-jE-YMj" firstAttribute="leading" secondItem="Ixd-Xa-A0O" secondAttribute="leading" constant="30" id="nOg-z8-ZgQ"/>
+                            <constraint firstItem="ZIK-hf-dLV" firstAttribute="leading" secondItem="Ixd-Xa-A0O" secondAttribute="leading" constant="27" id="pLH-Pb-f1E"/>
+                            <constraint firstItem="htF-gd-nPZ" firstAttribute="top" secondItem="lf2-U9-6Xu" secondAttribute="bottom" constant="27" id="qcZ-GE-vBY"/>
+                            <constraint firstItem="Nt8-Zg-yXq" firstAttribute="trailing" secondItem="Mou-Ah-hnX" secondAttribute="trailing" constant="-15" id="uaj-bu-GI8"/>
+                            <constraint firstItem="Ixd-Xa-A0O" firstAttribute="trailing" secondItem="Nt8-Zg-yXq" secondAttribute="trailing" constant="31" id="vCQ-yI-7nJ"/>
+                            <constraint firstItem="ZRZ-S4-QHT" firstAttribute="leading" secondItem="Ixd-Xa-A0O" secondAttribute="leading" constant="43" id="xWk-8b-xoL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ixd-Xa-A0O"/>
                     </view>
@@ -1580,8 +1696,9 @@ evidence-based, peer-reviewed, publicly available, non-profit gene/drug guidelin
         <image name="screen24image1" width="144" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HyB-Y8-XyC"/>
-        <segue reference="myq-4A-c7g"/>
+        <segue reference="IHF-Ce-8jw"/>
+        <segue reference="1WO-5n-7RK"/>
+        <segue reference="Bhi-7p-Geq"/>
         <segue reference="DZ2-wd-owj"/>
         <segue reference="1vS-Hi-dqf"/>
         <segue reference="0ah-gw-yNl"/>
@@ -1591,7 +1708,7 @@ evidence-based, peer-reviewed, publicly available, non-profit gene/drug guidelin
         <segue reference="i4C-1X-OgF"/>
         <segue reference="Wc1-j8-iQg"/>
         <segue reference="egF-R7-zOa"/>
-        <segue reference="MTZ-V1-mFV"/>
-        <segue reference="CAX-0d-bqN"/>
+        <segue reference="Gjf-5J-3jz"/>
+        <segue reference="qSq-eX-QY8"/>
     </inferredMetricsTieBreakers>
 </document>

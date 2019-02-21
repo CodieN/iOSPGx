@@ -17,6 +17,8 @@ class DosageCalcViewController: UIViewController, UIPickerViewDataSource, UIPick
     
     var errormsg = ""
     var errormsg2 = ""
+    var errormsg3 = ""
+    var errormsg4 = ""
     
     var runningnum = ""
     var runningWeight = ""
@@ -159,7 +161,7 @@ class DosageCalcViewController: UIViewController, UIPickerViewDataSource, UIPick
         switch WeightTypeTxt.text {
         case "kg"?:
             if PatWeight.isEmpty{
-                errormsg = "error"
+                errormsg2 = "error"
                 print("error")
             } else {
                 errormsg = ""
@@ -167,10 +169,10 @@ class DosageCalcViewController: UIViewController, UIPickerViewDataSource, UIPick
             }
         case "lbs"?:
             if PatWeight.isEmpty{
-                errormsg = "error"
+                errormsg2 = "error"
                 print("error")
             } else {
-                errormsg = ""
+                errormsg2 = ""
                 runningWeight = "\(Double(PatWeight)! * 0.45359237)"
             }
         case .none:
@@ -185,26 +187,26 @@ class DosageCalcViewController: UIViewController, UIPickerViewDataSource, UIPick
         case "mg"?:
             
             if PatMedAmt.isEmpty {
-                errormsg2 = "error"
+                errormsg3 = "error"
                 print("error")
             }else {
-                errormsg2 = ""
+                errormsg3 = ""
                 runningMedAmt = "\(Double(PatMedAmt)! * 1000000)"
             }
         case "mcg"?:
             if PatMedAmt.isEmpty {
-                errormsg2 = "error"
+                errormsg3 = "error"
                 print("error")
             }else {
-                errormsg2 = ""
+                errormsg3 = ""
                 runningMedAmt = "\(Double(PatMedAmt)! * 1000)"
             }
         case "gm"?:
             if PatMedAmt.isEmpty {
-                errormsg2 = "error"
+                errormsg3 = "error"
                 print("error")
             }else {
-                errormsg2 = ""
+                errormsg3 = ""
                 runningMedAmt = "\(Double(PatMedAmt)! * 1000000000)"
             }
         case .none:
@@ -218,18 +220,18 @@ class DosageCalcViewController: UIViewController, UIPickerViewDataSource, UIPick
         switch LiqVolTypeTxt.text {
         case "mL"?:
             if PatPerVol.isEmpty{
-                errormsg2 = "error"
+                errormsg4 = "error"
                 print("error")
             } else {
-                errormsg2 = ""
+                errormsg4 = ""
                 runningPerVol = "\(Double(PatPerVol)! * 1000)"
             }
         case "L"?:
             if PatPerVol.isEmpty{
-                errormsg2 = "error"
+                errormsg4 = "error"
                 print("error")
             } else {
-                errormsg2 = ""
+                errormsg4 = ""
                 runningPerVol = "\(Double(PatPerVol)! * 1000000)"
             }
         case .none:
@@ -238,7 +240,7 @@ class DosageCalcViewController: UIViewController, UIPickerViewDataSource, UIPick
             runningPerVol = "\(Double(PatPerVol)! * 1)"
         }
         
-        if errormsg.isEmpty{
+        if errormsg.isEmpty && errormsg2.isEmpty{
             
             output1 = Double(runningnum)! * Double(runningWeight)!
             
@@ -308,7 +310,7 @@ class DosageCalcViewController: UIViewController, UIPickerViewDataSource, UIPick
             
         }
         
-        if errormsg2.isEmpty{
+        if errormsg3.isEmpty && errormsg4.isEmpty{
             
             output2 = ((output1 * Double(runningPerVol)!) / Double(runningMedAmt)!)
             
